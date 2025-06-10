@@ -15,9 +15,17 @@ This project implements a basic signature-based antivirus system using MATLAB. I
 3. Write folder path for AV to detect
 4. Add your own TLSH hashes to enhance detection capabilities.
 
+## TLSH tool
+
+This project is using tlsh from TrendMicro which is necessary for this tool to work. Installation steps:
+- wget https://github.com/trendmicro/tlsh/archive/master.zip -O master.zip
+- unzip master.zip
+- cd tlsh-master
+- make.sh
+
 ### TLSH Hash Format
 
-All hashes should follow the format below and be added inside a JSON file:
+All hashes used for rule should follow the format below and be added inside a JSON file:
 
 ```json
 {
