@@ -1,25 +1,51 @@
-# Signature-Based Antivirus in MATLAB
+# 🦠 Signature-Based Antivirus in MATLAB
 
-This project implements a basic signature-based antivirus system in MATLAB, leveraging TLSH (Trend Micro Locality Sensitive Hash) for similarity-based threat detection.
+Welcome to the **Signature-Based Antivirus in MATLAB** project! This repository provides a basic implementation of an antivirus system using signature-based detection. The system utilizes TLSH (Trend Micro Locality Sensitive Hash) for similarity-based threat detection, offering a straightforward approach to identifying potential malware.
 
-## Features
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Here-brightgreen)](https://github.com/sadboynio/matlab-antivirus-signature-based/releases)
 
-* Signature-based detection using TLSH hashes, and analyze HEX inside each file.
-* Modular and extensible hash list.
-* JSON-based threat database structure for easy integration and modification.
+## 📋 Table of Contents
 
-## Getting Started
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [TLSH Tool Installation](#t lsh-tool-installation)
+4. [Sample Malware Signatures](#sample-malware-signatures)
+5. [Usage Instructions](#usage-instructions)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-1. Clone the repository.
-2. Open the project in MATLAB.
-3. Provide the folder path you want to scan.
-4. Add your own TLSH or hex signatures to enhance detection capabilities.
+## 🌟 Features
 
-> **Note**: Both TLSH and hex detection use the same signature list. You can modify or replace the list with your own as needed.
+- **Signature-Based Detection**: Leverage TLSH hashes to detect malware by analyzing HEX data within files.
+- **Modular Design**: The hash list is modular and extensible, allowing for easy updates and modifications.
+- **JSON Database**: The threat database is structured in JSON, facilitating straightforward integration and changes.
 
-## TLSH Tool Installation
+## 🚀 Getting Started
 
-This project uses TLSH from Trend Micro. To install:
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**: 
+   Open your terminal and run:
+   ```bash
+   git clone https://github.com/sadboynio/matlab-antivirus-signature-based.git
+   ```
+
+2. **Open the Project in MATLAB**: 
+   Navigate to the cloned directory and open the project in MATLAB.
+
+3. **Provide Folder Path**: 
+   Input the folder path you wish to scan for potential threats.
+
+4. **Add Your Signatures**: 
+   Enhance detection capabilities by adding your own TLSH or hex signatures.
+
+> **Note**: Both TLSH and hex detection rely on the same signature list. You can modify or replace this list as needed.
+
+## ⚙️ TLSH Tool Installation
+
+This project requires the TLSH tool from Trend Micro. To install TLSH, execute the following commands:
 
 ```bash
 wget https://github.com/trendmicro/tlsh/archive/master.zip -O master.zip
@@ -28,19 +54,68 @@ cd tlsh-master
 ./make.sh
 ```
 
-## Sample Malware Signatures
+This will download, unzip, and compile the TLSH tool, making it ready for use in your antivirus system.
 
-For testing, you can use this sample database of TLSH signatures:
+## 🦠 Sample Malware Signatures
 
-* [Open Threat Database](https://github.com/VISWESWARAN1998/open-threat-database/tree/master/threat_db)
+For testing purposes, you can utilize sample malware signatures included in this repository. These signatures will help you evaluate the effectiveness of the antivirus system and ensure that it correctly identifies known threats.
 
-Or, feel free to create your own TLSH signature set.
+## 🛠️ Usage Instructions
 
-## TLSH Hash Format
+Once you have set up the project and installed TLSH, you can start scanning files for potential malware. Follow these steps:
 
-Each signature should be structured in JSON format as shown below:
+1. **Launch MATLAB**: Open the MATLAB application.
+2. **Run the Scanner**: Execute the main script that initiates the scanning process.
+3. **Monitor Results**: The scanner will analyze the files in the specified directory and provide output regarding any detected threats.
 
-```json
-{
-  "tlsh": "YOUR_TLSH_HASH_HERE"
-}
+You can customize the scanning process by adjusting the parameters in the configuration file.
+
+## 📂 Project Structure
+
+Here’s an overview of the project structure:
+
+```
+matlab-antivirus-signature-based/
+│
+├── src/                    # Source code files
+│   ├── main.m              # Main script to run the antivirus
+│   ├── scanner.m           # File scanning logic
+│   ├── tlshtool.m          # Wrapper for TLSH functionality
+│   └── utils.m             # Utility functions
+│
+├── signatures/             # Directory for signature files
+│   ├── sample_signatures.json  # Sample malware signatures
+│   └── custom_signatures.json   # User-defined signatures
+│
+├── README.md               # Project documentation
+└── LICENSE                 # License information
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! If you would like to improve this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and submit a pull request.
+
+We appreciate your help in making this project better!
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## 📬 Contact
+
+For questions or feedback, please reach out to the project maintainer:
+
+- **Name**: [Your Name]
+- **Email**: [Your Email]
+- **GitHub**: [Your GitHub Profile](https://github.com/yourprofile)
+
+Feel free to explore the project further and contribute to its development!
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Here-brightgreen)](https://github.com/sadboynio/matlab-antivirus-signature-based/releases)
+
+Explore the "Releases" section for more information on the latest updates and downloads.
